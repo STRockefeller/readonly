@@ -16,7 +16,7 @@ func TestReadOnlyGet(t *testing.T) {
 
 func TestFinalSetAndGet(t *testing.T) {
 	const value = "test"
-	f := NewFinal[string]()
+	var f Final[string]
 	f.Set(value)
 
 	got := f.Get()
@@ -26,7 +26,7 @@ func TestFinalSetAndGet(t *testing.T) {
 func TestFinalSetTwice(t *testing.T) {
 	const value = "test"
 	const value2 = "test2"
-	f := NewFinal[string]()
+	var f Final[string]
 
 	f.Set(value)
 	f.Set(value2)

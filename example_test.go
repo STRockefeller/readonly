@@ -21,7 +21,7 @@ func ExamplereadOnly() {
 // Examplefinal demonstrates the usage of the final struct.
 func Examplefinal() {
 	// Create a new final instance with an integer type
-	f := NewFinal[int]()
+	var f Final[int]
 
 	// Set the value of the final instance
 	f.Set(42)

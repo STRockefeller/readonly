@@ -2,7 +2,7 @@
 
 ## Overview
 
-The `readonly` package provides a simple and efficient way to handle immutable and final values in Go. It offers two main types: `readOnly` and `final`, each designed to manage values that are either immutable or assigned once.
+The `readonly` package provides a simple and efficient way to handle immutable and final values in Go. It offers two main types: `ReadOnly` and `Final`, each designed to manage values that are either immutable or assigned once.
 
 ## Installation
 
@@ -14,11 +14,11 @@ import "github.com/STRockefeller/readonly"
 
 ## Usage
 
-### The `readOnly` Struct
+### The `ReadOnly` Struct
 
-The `readOnly` struct is used to create immutable values. Once a value is set, it cannot be changed.
+The `ReadOnly` struct is used to create immutable values. Once a value is set, it cannot be changed.
 
-#### Creating a `readOnly` Instance
+#### Creating a `ReadOnly` Instance
 
 ```go
 value := readonly.NewReadOnly(42)
@@ -30,14 +30,14 @@ value := readonly.NewReadOnly(42)
 v := value.Get()
 ```
 
-### The `final` Struct
+### The `Final` Struct
 
-The `final` struct allows for creating a value that can be set only once. It's an alternative to `readOnly` for scenarios where the value might not be known at the time of instantiation.
+The `Final` struct allows for creating a value that can be set only once. It's an alternative to `ReadOnly` for scenarios where the value might not be known at the time of instantiation.
 
-#### Creating a `final` Instance
+#### Creating a `Final` Instance
 
 ```go
-finalValue := readonly.NewFinal[int]()
+var finalValue readonly.Final[int]
 ```
 
 #### Setting the Value
@@ -58,8 +58,8 @@ v := finalValue.Get()
 
 ## Features
 
-- Immutable value handling with `readOnly`.
-- Single-assignment value handling with `final`.
+- Immutable value handling with `ReadOnly`.
+- Single-assignment value handling with `Final`.
 - Type-safe implementation using Go generics.
 
 ## License
