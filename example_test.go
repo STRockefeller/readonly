@@ -4,8 +4,8 @@ import (
 	"fmt"
 )
 
-// ExamplereadOnly demonstrates the usage of the readOnly struct.
-func ExamplereadOnly() {
+// ExampleReadOnly demonstrates the usage of the readOnly struct.
+func ExampleReadOnly() {
 	// Create a new readOnly instance with an immutable string value
 	ro := NewReadOnly("Hello, World!")
 
@@ -18,8 +18,8 @@ func ExamplereadOnly() {
 	// Output: Hello, World!
 }
 
-// Examplefinal demonstrates the usage of the final struct.
-func Examplefinal() {
+// ExampleFinal demonstrates the usage of the final struct.
+func ExampleFinal() {
 	// Create a new final instance with an integer type
 	var f Final[int]
 
