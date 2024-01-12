@@ -45,10 +45,7 @@ finalValue := readonly.NewFinal[int]()
 To set the value for the first time:
 
 ```go
-err := finalValue.Set(42)
-if err != nil {
-    // handle error
-}
+finalValue.Set(42)
 ```
 
 #### Accessing the Value
@@ -56,16 +53,7 @@ if err != nil {
 To safely access the value:
 
 ```go
-v, err := finalValue.Get()
-if err != nil {
-    // handle error
-}
-```
-
-To access the value with a panic on error:
-
-```go
-v := finalValue.MustGet()
+v := finalValue.Get()
 ```
 
 ## Features
@@ -73,10 +61,6 @@ v := finalValue.MustGet()
 - Immutable value handling with `readOnly`.
 - Single-assignment value handling with `final`.
 - Type-safe implementation using Go generics.
-
-## Error Handling
-
-Both `final.Get()` and `final.Set()` methods return errors to handle situations where the value is not set or being reassigned, respectively. Use `MustGet()` and `MustSet()` for panicking versions.
 
 ## License
 

@@ -24,16 +24,13 @@ func Examplefinal() {
 	f := NewFinal[int]()
 
 	// Set the value of the final instance
-	err := f.Set(42)
-	if err != nil {
-		// Handle the error
-	}
+	f.Set(42)
+
+	// The Set method only works the first time it's called.
+	f.Set(24)
 
 	// Get the value from the final instance
-	val, err := f.Get()
-	if err != nil {
-		// Handle the error
-	}
+	val := f.Get()
 
 	// Print the value
 	fmt.Println(val)
